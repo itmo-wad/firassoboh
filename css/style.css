@@ -1,0 +1,146 @@
+* {
+  box-sizing: boder-box;
+}
+
+body {
+  margin: 0;
+}
+img { 
+outline: 5px solid black;
+}
+
+img:hover {
+outline: 5px solid black;
+outline-offset: -10px;
+}
+#main {
+  position: relative;
+  z-index: 20;
+  background: #fff;
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
+}
+@media (min-width: 640px) {
+  #main {
+    padding: 1em;
+  }
+}
+
+.fake-section {
+  background: #eee;
+  height: 300px;
+}
+
+.tiles-a {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tiles-a ul {
+  margin: 0;
+  padding: 0;
+}
+.tiles-a li {
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .tiles-a li {
+    float: left;
+    width: 33.33%;
+  }
+}
+.tiles-a a {
+  margin: 1em;
+  display: block;
+  background: #222;
+  padding-top: 73%;
+  height: 0;
+}
+
+#aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #eee;
+  overflow-y: scroll;
+  z-index: 10;
+}
+#aside img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+#aside .wrapper {
+  padding: 1em;
+}
+#aside .close {
+  width: 25px;
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.show-detail {
+  overflow: hidden;
+}
+.show-detail #main {
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+.gallery h3 {
+  position: absolute;
+  visibility: hidden;
+  color: rgba(255, 255, 255, 1);
+  margin: 0;
+  pointer-events: none;
+}
+
+.gallery li:hover h3 {
+  font-size: 14px;
+	font-style: italic;
+text-align: center;
+  visibility:visible ;
+  color: #000000;
+  margin: 0;
+  pointer-events: none;
+}
+
+gallery li a img:hover t {
+  font-size: 14px;
+	font-style: italic;
+text-align: center;
+  visibility:visible ;
+  color: #000000;
+  margin: 0;
+  pointer-events: none;
+}
+
+.gallery:hover li a img{
+	border: none;
+}
+
+.gallery:hover li a img:hover{
+	border: double;
+	opacity: 0.6;
+	outline: 2px solid #E3E3E3;
+	outline-offset: -10px;
+	visibility: visible;
+}
